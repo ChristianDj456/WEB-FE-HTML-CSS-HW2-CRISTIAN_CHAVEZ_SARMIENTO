@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration-style: line;
 }
 
 ul {
@@ -13,6 +14,7 @@ ul {
 body {
     font-family: 'Nunito', sans-serif;
     background-color: #f5f5f5; 
+    /* background-image: url('img/galaxy-buds3-pro-kv-pc.webp'); */
     border: 4px solid black;
 }
 
@@ -51,11 +53,20 @@ body {
     border-radius: 10px;
 }
 
+.blur-effect {
+    filter: blur(5px);
+}
+
+
 .section1 { 
     grid-area: section1;
+    background-color: rgba(0, 0, 0, 0.5);
     align-items: center;
     align-content: center;
     text-align: center;
+    background-image: url('img/galaxy-buds3-pro-crystal-amplifier-pc.jpg');
+    background-position: center;
+    background-size: cover;
 }
 .section2 { 
     grid-area: section2;  
@@ -79,6 +90,8 @@ body {
     align-items: center;
     align-content: center;
     text-align: center;
+    background-image: url('img/galaxy-buds3-pro-kv-pc.webp');
+    background-size: cover;
 }
 
 .sombra {
@@ -126,10 +139,45 @@ img {
     display: flex;
 }
 
+/* Imagen de fondo con desenfoque */
+.layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20%;
+    height: 100%;
+    background-image: url('img/galaxy-buds3-pro-crystal-tw-on-pc.jpg'); /* Reemplaza con tu imagen */
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px); /* Aplica el desenfoque */
+    z-index: -1; /* Coloca el fondo detrás del contenido */
+}
+
+/* Overlay para oscurecer ligeramente la imagen de fondo si es necesario */
+.layer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(245, 244, 244, 0.3); /* Oscurece el fondo para mejorar la legibilidad del texto */
+    z-index: 0; /* También está detrás del contenido */
+}
+
+/* Contenedor del contenido */
+.content {
+    position: relative;
+    z-index: 1; /* Asegura que el contenido esté por encima del fondo */
+    color: white;
+    text-align: center;
+}
+
+
 .glowing-text {
     text-shadow: 0 0 10px rgba(7, 7, 7, 0.7), 
                  0 0 20px rgba(255, 255, 255, 0.7), 
-                 0 0 30px rgba(255, 255, 255, 0.7);
+                 0 0 30px rgba(7, 7, 7, 0.7);
     text-align: center;
     display: flex;
     align-items: center;
