@@ -7,8 +7,14 @@
     text-decoration-style: line;
 }
 
+
 ul {
     list-style: none;
+}
+
+h2 {
+    align-items: center;
+    text-align: center;
 }
 
 body {
@@ -53,20 +59,14 @@ body {
     border-radius: 10px;
 }
 
-.blur-effect {
-    filter: blur(5px);
-}
 
 
 .section1 { 
     grid-area: section1;
-    background-color: rgba(0, 0, 0, 0.5);
     align-items: center;
     align-content: center;
     text-align: center;
-    background-image: url('img/galaxy-buds3-pro-crystal-amplifier-pc.jpg');
-    background-position: center;
-    background-size: cover;
+    justify-content: center;
 }
 .section2 { 
     grid-area: section2;  
@@ -79,20 +79,71 @@ body {
     grid-area: section3; 
     align-items: center;
     text-align: center;
+    align-content: center;
 }
 .section4 { 
     grid-area: section4; 
     align-items: center;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    /* transition: background-color 0.3s ease, background-image 0.3s ease; */
+    
 }
+
 .section5 { 
     grid-area: section5; 
-    align-items: center;
+    align-items: bottom;
     align-content: center;
     text-align: center;
     background-image: url('img/galaxy-buds3-pro-kv-pc.webp');
     background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    border-top: 2px solid #1C1C1C;
 }
+
+/* .section4:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    background-image: url('img/galaxy-buds3-pro-highlights04-pc.gif');
+    background-size: cover;
+    background-position: center;
+    color: white;
+} */
+
+.button a{
+    background-color: transparent;
+    border: 2px solid #1C1C1C;
+    border-radius: 5px;
+    padding: 10px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.button a:hover {
+    background-color: #1C1C1C;
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 10px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;
+    
+}
+
+
 
 .sombra {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
@@ -101,7 +152,7 @@ body {
 
 header {
     grid-area: header;
-    background: linear-gradient(to right, #ff66b2, #185a9d);
+    background: linear-gradient(to right, #000000, #424242);
     color: #FFFFFF;
     text-align: center;
     align-content: center;
@@ -109,18 +160,19 @@ header {
 
 aside {
     grid-area: aside;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #1a1a1a;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    background: linear-gradient(to top, #000000, #424242);
+    color: white;
     padding: 10px;
+    /* box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.5); */
 }
 
 main {
     grid-area: main;
-    /* background-color: #f5f5f5; */
-    background-color: #1a1a1a;
-    color: #FFFFFF;
+    /* background-color: #1C1C1C; */
+    background: linear-gradient(to top, #000000, #424242);
+    color: #E0E0E0;
     padding: 10px;
-    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 img {
@@ -145,41 +197,6 @@ video {
     display: flex;
 }
 
-/* Imagen de fondo con desenfoque */
-.layer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 20%;
-    height: 100%;
-    background-image: url('img/galaxy-buds3-pro-crystal-tw-on-pc.jpg'); /* Reemplaza con tu imagen */
-    background-size: cover;
-    background-position: center;
-    filter: blur(5px); /* Aplica el desenfoque */
-    z-index: -1; /* Coloca el fondo detrás del contenido */
-}
-
-/* Overlay para oscurecer ligeramente la imagen de fondo si es necesario */
-.layer::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(245, 244, 244, 0.3); /* Oscurece el fondo para mejorar la legibilidad del texto */
-    z-index: 0; /* También está detrás del contenido */
-}
-
-/* Contenedor del contenido */
-.content {
-    position: relative;
-    z-index: 1; /* Asegura que el contenido esté por encima del fondo */
-    color: white;
-    text-align: center;
-}
-
-
 .glowing-text {
     text-shadow: 0 0 10px rgba(7, 7, 7, 0.7), 
                  0 0 20px rgba(255, 255, 255, 0.7), 
@@ -197,7 +214,7 @@ video {
 
 footer {
     grid-area: footer;
-    background: linear-gradient(to right, #ff66b2, #185a9d);
+    background: linear-gradient(to right, #000000, #424242);
     color: #FFFFFF;
     padding: 10px;
     text-align: center;
@@ -207,4 +224,57 @@ footer {
     width: 40px;
     margin: center;
     padding-right: 10px;
+}
+
+
+/* Product Card */
+.product-card {
+    background-color: transparent;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    padding: 15px;
+    text-align: center;
+    position: relative;
+}
+
+.badge {
+    background-color: #0ac1a7;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+.price {
+    font-size: 22px;
+    color: white;
+    margin: 10px 0;
+}
+
+.rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.stars {
+    color: #f39c12;
+    font-size: 18px;
+}
+
+.rating-score {
+    margin-left: 5px;
+    color: white;
+    font-size: 16px;
 }
