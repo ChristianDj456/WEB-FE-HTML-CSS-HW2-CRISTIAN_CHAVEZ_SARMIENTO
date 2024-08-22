@@ -14,21 +14,57 @@
     <header>
         <div class="header-container">
             <h1>
-                <a href="index.html" class="back-button"> Galaxy Buds3 Pro</a>
+                <a href="index.html" class="back-button"> Back to Galaxy Buds3 Pro</a>
             </h1>
             <h1 class="contact-us"> Contact Us </h1>
         </div>
     </header>
 
-    <main>
-        <h2 class="glowing-text">Description</h2>
-        <p>Redefine your listening experience. Hear every note in crystal clarity with the 24-bit CODEC. Minimize distortion with our first-ever dual amplifier on Galaxy Buds. Capture a wide range of intricate details with upgraded two-way speakers, including a planar tweeter, a first for Galaxy Buds. Take your listening experience to the next level with Noise Control powered by Galaxy AI and real-time rendering. See your Buds in a new light.</p>
+    <main class="grid-section">
+        <!-- Product Info -->
+         <section class="section1">
+            <div class="video-container">
+                <div class="video-adjust">
+                    <!-- <video width="560" height="315" autoplay loop muted>
+                        <source src="vlc/GalaxyAI.mp4" type="video/mp4">
+                    </video> -->
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Er6ppurPigo?autoplay=1&controls=0&loop=1&playlist=Er6ppurPigo" title="YouTube video player" frameborder="0" allow="autoplay" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <p>Redefine your listening experience. Hear every note in crystal clarity with the 24-bit CODEC. Minimize distortion with our first-ever dual amplifier on Galaxy Buds. Capture a wide range of intricate details with upgraded two-way speakers, including a planar tweeter, a first for Galaxy Buds. Take your listening experience to the next level with Noise Control powered by Galaxy AI and real-time rendering. See your Buds in a new light.</p>
+             </div>
+         </section>
+        <!-- Form -->
+         <section class="section2">
+            <div class="form-container">
+                <form action="/submit-form" method="post">
+                    <div class="form-group">
+                      <label for="name">Full Name:</label>
+                      <input type="text" id="name" name="name" required>
+                    </div>
+              
+                    <div class="form-group">
+                      <label for="email">Email Address:</label>
+                      <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone number">Phone Number:</label>
+                        <input type="number" id="phone number" name="phone number" required>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="comment">Explain us your requirement:</label>
+                      <textarea id="comment" name="comment" rows="4"></textarea>
+                    </div>
+              
+                    <div class="form-group">
+                      <button type="submit">Submit</button>
+                      <button type="button" class="cancel" onclick="window.location.href='/'">Cancel</button>
+                    </div>
+                  </form>              
+             </div>
+         </section>
     </main>
-
-    <footer>
-
-    </footer>
-
 </body>
 
 </html>
