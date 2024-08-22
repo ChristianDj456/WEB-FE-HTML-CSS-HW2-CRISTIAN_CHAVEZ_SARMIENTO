@@ -32,6 +32,7 @@ body {
     "aside main main"
     "aside main main"
     "aside main main"
+    "footer footer footer"
     "footer footer footer";
 }
 
@@ -78,7 +79,6 @@ body {
     text-align: center;
     align-content: center;
     margin-right: 10px;
-    border: 2px solid #1C1C1C;
 }
 .section4 { 
     grid-area: section4; 
@@ -216,6 +216,7 @@ footer {
     color: #FFFFFF;
     padding: 10px;
     text-align: center;
+    height: auto;
 }
 
 .social-icons {
